@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 136, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 166, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 136, 0);
+  border-radius: 20px;
+  border: 3px solid rgb(255, 136, 0);
+}
+
+:root {
+    --color-a:rgba(255, 102, 0, 0.658);
+    --color-s:rgb(255, 136, 0);
+    --color-p:rgb(255, 94, 0);
+    --color-1: rgba(0, 0, 0, 0.781);
+    --color-2: rgba(255, 255, 255, 0.74);
+    --color-3: rgb(255, 115, 0) ;
+    --font-p: 'Sulphur Point', sans-serif;
+    --font-s: 'Raleway', sans-serif;;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--color-2);
+    z-index: 1;
+}
+
+footer{
+    background-color: var(--color-1);
+    height: 100px;
+    width: 100vw;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+footer ul li{
+    margin-left: 20px;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    grid-template-areas: "logo pesquisa btn";
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(255, 94, 0), rgb(255, 123, 0));
+}
+
+.logo-nav{
+    grid-area: "logo";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-2);
+    font-family: var(--font-p);
+    letter-spacing: 3px;
+}
+
+.pesquisa-nav{
+    grid-area: "pesquisa";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa-nav input{
+    height: 30px;
+    width: 230px;
+    padding-left: 5px;
+    border: none;
+    font-family: var(--font-p);
+    font-size: 16px;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    position: relative;
+    left: 2px;
+}
+
+.pesquisa-nav button{
+    height: 32px;
+    width: 32px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;   
+}
+
+.pesquisa-nav button img{
+    height: 100%;
+}
+
+.btn-nav button{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;   
+}
+
+.btn-nav button img{
+    height: 100%;
+}
+.btn-nav{
+    grid-area: "btn";
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+main{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    background-color: #5f2e0eb6;
+    background-image: url(../img/ian-dooley-DuBNA1QMpPA-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    align-items: top;
+    justify-content: right;
+    animation: fundo 20s ease-in-out;
+}
+
+main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-p);
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 1cm;
+    font-weight: 900;
+    border-bottom: solid 1px var(--color-p);
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fundo{
+    0%{
+        background-size: 100%;
+    }
+
+    50%{
+        background-size: 120%;
+    }
+
+    100%{
+        background-size: 100%;
+    }
+}
+
+/* .aside{
+    position: fixed;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+} */
+
+aside{
+    position: fixed;
+    height: 100vh;
+    left: -333px;
+    width: 333px;
+    background-color: var(--color-p);
+    font-size: 20px;
+    z-index: 2;
+}
+
+
+aside ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+aside ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-s);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+aside:hover ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+.aberto ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+aside:hover{
+    animation: abrir 1s ;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: var(--color-a);
+}
+
+
+@keyframes abrir {
+    0%{
+        left: -333px;
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes fechar{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -333px;
+    }
+}
+.aberto{
+    animation: abrir 1s ;
+    width: 333px;
+    left: 0px;
+    backdrop-filter: blur(5px);
+    background-color: var(--color-a);
+}
+
+.fechado{
+    animation: fechar 1s ;
+    width: 333px;
+    left: -333px;
+    backdrop-filter: blur(5px);
+    background-color: var(--color-a);
+}
+
+.cards{
+    background-color: rgb(255, 243, 232);
+}
+
+.cards-box{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100vw;
+    
+}
+
+.title1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-p);
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+    letter-spacing: 2px;
+    color: var(--color-s);
+}
+.cards-1,.cards-2,.cards-3,.cards-4{
+    height: 300px;
+    width: 250px;
+    background-color: rgba(107, 76, 47, 0.719);
+    margin: 0px 30px 0px 30px;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cards-1{
+    background-image: url(../img/Punta-Cana-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+    border: wave 3px black;
+}
+.cards-2{
+    background-image: url(../img/Cancún-768x576.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-3{
+    background-image: url(../img/Curaçao-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-4{
+    background-image: url(../img/Aruba-768x575.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.cards-1:hover .text,.cards-2:hover .text,.cards-3:hover .text,.cards-4:hover .text{
+    display: block;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    animation: cards_h .7s ease-in-out;
+}
+
+@keyframes cards_h {
+    0%{
+        margin-top:300px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+.text{
+    display: none;
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-p);
+    letter-spacing: 2px;
+    transition-delay: 1s;
+    text-decoration: none;
+}
+
+.text h1{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.OS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 100vw;
+    background-color: rgb(255 124 0);
+    margin-bottom: 10px;
+    border: dashed 5px white;
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-p);
+    overflow: hidden;
+}
+.OS div{
+    overflow: hidden;
+    text-align: center;
+}
+
+.dados{
+    height: 80px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dados input[text]{
+    height: 40px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+}
+
+.dados input[btn]{
+    height: 40px;
+    width: 50px;
+    border: #fff solid 2px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descontos{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.img-box{
+    color: green;
+}
+.pd{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-direction: column;
+    padding: 40px;
+}
+.pd-1,.pd-2,.pd-3{
+    padding: 10PX;
+    border-radius: 10px;
+    border: solid 3px rgb(54, 32, 32);
+    backdrop-filter: blur(5px);
+    color: rgba(54, 32, 32, 0.63);
+    max-width: 600px;
+    width: 80%;
+    margin-top: 20px;
+    height: 180px;
+    font-family: var(--font-s);
+}
+.pd-1{
+    background-image: url(../img/melhores-pequenas-cidades-da-holanda.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: center center;
+}
+.pd-2{
+    background-image: url(../img/cidades-da-inglaterra-1.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: center center;
+}
+.pd-3{
+    background-image: url(../img/cidades-bonitas-frança-7.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: top center;
+}
+
+.ps{
+    width: 50%;
+    background-image: url(../img/Coupons-5895f8f63df78caebcd02f1b.jpg);
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+#mapa{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mapa script{
+    height: 100%;
+}
+@media screen and (max-width:1000px){
+    .cards-box{
+        grid-template-columns: 50% 50%;
+        height: auto;
+    }
+
+    .descontos{
+        flex-direction: column;
+    }
+
+    .ps{
+        width: 100vw;
+    }
+    .pd{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 300px;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        margin: 20px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width:700px){
+    nav{
+        grid-template-columns: 30% 50% 20%;
+    }
+    .logo-nav{
+        font-size: 12px;
+    }
+    .btn-nav{
+        justify-content: center;
+    }
+
+    main{
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    main h1{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        border-bottom: rgb(0, 0, 0) solid 1px;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        margin: 20px 20px 20px 20px;
+    }
+    .title1{
+        font-size: 18px;
+    }
+    .OS {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .OS div h1{
+        font-size: 18px;
+    }
+    .dados{
+        padding: 5px;
+        flex-direction: column;
+        height: 100%;
+    }
+    .dados input{
+        transform: scale(.91);
+    }
+    .dados input[text]{
+        margin-bottom: 2px;
+    }
+
+    .pd{
+        padding: 0;
+    }
+    
+    
+}
+
+@media screen and (max-width:500px){
+    main{
+        animation: none;
+    }
+    .content_main h1{
+        display: none;
+    }
+    .cards-box{
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        height: 30vh;
+        width: 40vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pesquisa-nav button{
+        width: 43px;
+    }
+    .text{
+        display: block;
+    }
+
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text p{
+        display: none;
+    }
+}
+
+
+.btn-nav button{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;   
+}
+
+.btn-nav button img{
+    height: 100%;
+}
+.btn-nav{
+    grid-area: "btn";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ia1{
+    display: block;
+}
+
+#ia2{
+    display: none;
+}
+
+@media screen and (max-width:400px){
+    .cards-box{
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+    .pesquisa-nav button{
+        width: 43px;
+        height: 32px;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        height: 30vh;
+        width: 80vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dturismo</title>
+    <link rel="stylesheet" href="preço/css/style.css">
+    <link rel="shortcut icon" href="preço/img/2.png" type="image/x-icon">
+</head>
+<body>
+    <aside id="anside" class="i">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lugares.html">Lugares</a></li>
+            <li><a href="https://www.instagram.com/etecrgs/">Suporte</a></li>
+        </ul>
+       </aside>
+       <nav>
+           <div class="logo-nav">
+               <h2>DTurismo</h2>
+           </div>
+           <div class="pesquisa-nav">
+               <input type="text" id="inp" placeholder="O que procura?">
+               <button id="pbtn"><img src="preço/img/lupa.png"></button>
+           </div>
+           <div class="btn-nav">
+               <button id="btnl"><img id="ia1" src="index/img/cardapio.png" alt=""><img id="ia2" src="preço/img/x.png" alt=""></button>
+           </div>
+       </nav>
+       <main>
+            <div class="calculo">
+                <div class="preco">
+                    <h2 for="">Adultos  R$115,75</h2>
+                    <h2 for="">Crianças R$67,25 </h2>
+                </div>
+
+                <div class="local">
+                <h3>Calcule seu orçamento:</h3>   
+                
+                <div class="local1">
+                
+                <h4>De: </h4>
+                <input type="text" name="nome" value="Ponto de partida"
+                onfocus="javascript:(this.value=='Ponto de partida'?this.value = '':null);"
+                onblur="javascript:(this.value==''?this.value = 'Ponto de partida':null);" />
+                </div>
+
+                <div class="local2">
+                <h4> Para: </h4>
+                <input type="text" name="nome" value="Destino"
+                onfocus="javascript:(this.value=='Destino'?this.value = '':null);"
+                onblur="javascript:(this.value==''?this.value = 'Destino':null);" /> 
+                <br>
+                </div>
+                
+                </div>
+
+                <div class="pessoas-box">
+                    <div>
+                        <p>Você pode viajar em um grupo de até 8 pessoas.</p>
+                    </div>
+                    
+                    <div class="pessoas">
+                        <div class="adultos">
+
+                            <h2>Adultos</h2>
+                            <p>maiores de 18</p>
+    
+                            <div class="al_di">
+    
+                            <button href="" onclick="diminuir ()">-</button>
+                            <p id="numero"></p>
+                            <button href="" onclick="aumentar ()">+</button>
+                            
+                            </div>
+                        </div>
+                        <div class="menores">
+    
+                            <h2>Crianças</h2>
+                            <p>menores de 18</p>
+    
+                            <div class="al_di">
+    
+                            <button href="" onclick="diminuir2 ()">-</button>
+                            <p id="numero2"></p>
+                            <button href="" onclick="aumentar2 ()">+</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="valores">
+                    <div><p for="">Adultos  R$</p> <p id="pa"></p></div>
+                    <div><p for="">Crianças R$</p> <p id="pc"></p></div>
+                    <div><p id="totali"></p> </div>
+                    
+                    <button onclick="calcular ()">Calcular</button>
+                </div>
+
+                
+            </div>
+            <iframe src="https://www.youtube.com/embed/lupJGB9H7gE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </main>
+        
+    <footer>
+        <ul>
+            <li>Daniel Rocha Alvarenga</li>
+            <li>Vitor Eduardo Silva de Carvalho</li>
+        </ul>
+        <ul>
+            <li>2022</li>
+            <li>PW - 4º BIMESTRE</li>
+        </ul>
+    </footer>
+</body>
+<script src="preço/js/script.js"></script>
+</html>
